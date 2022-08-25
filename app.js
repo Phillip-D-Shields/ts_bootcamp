@@ -1,14 +1,12 @@
-function add(n1, n2, showResult, phrase) {
-    if (showResult)
-        console.log("".concat(phrase, " ").concat(n1 + n2));
-    else
-        return n1 + n2;
+var userInput;
+var userName;
+userInput = 5;
+userInput = 'Phill';
+if (typeof userInput === 'string')
+    userName = userInput;
+userInput = true;
+// userName = userInput  
+function generateError(message, code) {
+    throw { message: message, errorCode: code };
 }
-var number1 = 5;
-var number2 = 4.5;
-var printResult = true;
-var resultPhrase = 'result is: ';
-// const result = add(number1, number2, printResult);
-// console.log(result);
-// console.log(typeof result);
-add(number1, number2, printResult, resultPhrase);
+generateError('testing error messaging', 666);
